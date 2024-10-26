@@ -1,0 +1,21 @@
+cat <<EOT > .github/workflows/Run-pyscript.yml
+name: Run Python Script
+
+on: [push]
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11.2'  # укажите версию Python, например 3.9 или 3.10
+
+      - name: Run Python Script
+        run: python script.py
+EOT
