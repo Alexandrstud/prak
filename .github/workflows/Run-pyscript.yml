@@ -1,4 +1,3 @@
-cat <<EOT > .github/workflows/Run-pyscript.yml
 name: Run Python Script
 
 on: [push]
@@ -14,8 +13,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.11.2'  # укажите версию Python, например 3.9 или 3.10
+          python-version: '3.11.2'
 
       - name: Run Python Script
-        run: python script.py
-EOT
+        run: python script.py > .github/workflows/Run-pyscript.yml
