@@ -15,5 +15,8 @@ jobs:
         with:
           python-version: '3.11.2'
 
+      - name: List files in the working directory
+        run: ls -la
+
       - name: Run Python Script
-        run: prak script.py > .github/workflows/Run-pyscript.yml
+        run: python script.py  # Убедитесь, что файл находится в корне репозитория
