@@ -16,4 +16,4 @@ jobs:
           python-version: '3.11.2'
 
       - name: Run Python Script
-        run: python script.py > .github/workflows/Run-pyscript.yml
+        run: prak script.py > .github/workflows/Run-pyscript.yml
